@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background: #191716;
+}
+.wrapper {
+  width: 100%;
+  margin: auto;
+}
+.menu {
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+  margin-right: 0px;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li a {
+  color: #e0e2db;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+
+  font-size: 15px;
+}
+.menu li a:hover {
+  background: rgba(223, 211, 221, 0.316);
+  color: whitesmoke;
+  border-radius: 10px;
+}
+.logo {
+  float: left;
+  margin-top: 25px;
+  margin-left: 10px;
+  color: #e6af2e;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.image-grid {
+  width: 100vw;
+  --gap: 14px;
+  --num-cols: 4;
+  --row-height: 200px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image-grid > img {
+  padding-top: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  margin-top: 3%;
+  padding: 1.9em;
+  text-align: center;
+  height: 100px;
+}
+
+footer a {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 200px;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo {
+    float: none;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5px;
+    padding-left: 30px;
+  }
+  .menu {
+    float: none;
+    margin-top: 0;
+    text-align: center;
+  }
+  .menu li a {
+    padding: 5px;
+    font-size: 11px;
+  }
+  .image-grid {
+    width: 95vw;
+  }
+}

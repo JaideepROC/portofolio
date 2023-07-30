@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br />
+    <br />
+
+    <div class="dice-container">
+      <img src="dice-1.png" id="dice1" onclick="holdDice(1)" />
+      <img src="dice-2.png" id="dice2" onclick="holdDice(2)" />
+      <img src="dice-3.png" id="dice3" onclick="holdDice(3)" />
+      <img src="dice-4.png" id="dice4" onclick="holdDice(4)" />
+      <img src="dice-5.png" id="dice5" onclick="holdDice(5)" />
+    </div>
+    <button class="button" onclick="dice()" id="rollButton">Roll Dice!</button>
+
+    <br />
+
+    <span>rounds Left:</span>
+    <span id="rounds-left">13</span>
+    <br />
+
+    <span>Rolls Left:</span>
+    <span id="roll-count">3</span>
+
+    <table id="yahtzeeTable">
+      <tr>
+        <th>Category</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td id="ones" class="cell">Ones</td>
+        <td id="onesScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="twos" class="cell">Twos</td>
+        <td id="twosScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="threes" class="cell">Threes</td>
+        <td id="threesScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="fours" class="cell">Fours</td>
+        <td id="foursScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="fives" class="cell">Fives</td>
+        <td id="fivesScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="sixes" class="cell">Sixes</td>
+        <td id="sixesScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="upperSecBonus">Upper Section Bonus</td>
+        <td id="upperSecBonusScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="threeOfAKind" class="cell">Three Of a Kind</td>
+        <td id="threeOfAKindScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="fourOfAKind" class="cell">Four Of a Kind</td>
+        <td id="fourOfAKindScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="fullHouse" class="cell">Full House</td>
+        <td id="fullHouseScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="smallStraight" class="cell">Small Straight</td>
+        <td id="smallStraightScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="largeStraight" class="cell">Large Straight</td>
+        <td id="largeStraightScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="chance" class="cell">Chance</td>
+        <td id="chanceScore" class="scoreDisplay">-</td>
+      </tr>
+      <tr>
+        <td id="yahtzee" class="cell">Yahtzee</td>
+        <td id="yahtzeeScore" class="scoreDisplay">-</td>
+      </tr>
+    </table>
+    <button onclick="resetGame()">Reset Game</button>
+    <div>
+      <h3>Total Score: <span id="p1-total-score">0</span></h3>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
